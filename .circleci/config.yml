@@ -6,6 +6,7 @@ jobs:
       - image: ubuntu:xenial-20210804
     steps:
       - checkout 
+      - run: apt-get update
       - run: apt-get install git
       - run: git config --global user.email hogehoge
       - run: git config --global user.name tokizuoh
