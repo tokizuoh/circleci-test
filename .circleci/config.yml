@@ -12,7 +12,6 @@ jobs:
       - run:
           shell: /bin/bash 
           command: |
-            set +e
             git commit -m '[CircleCI] update sample.txt'
 
 workflows:
