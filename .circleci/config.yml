@@ -5,11 +5,12 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
-      - checkout
-      - run: "git config --global user.email hogehoge"
-      - run: "git config --global user.name tokizuoh"
-      - run: "git add sample.txt"
-      - run: "git commit -m '[CircleCI] update sample.txt'"
+      - checkout 
+      - run: git config --global user.email hogehoge
+      - run: git config --global user.name tokizuoh
+      - run: git add sample.txt
+      - run: set +o pipefail
+      - run: git commit -m '[CircleCI] update sample.txt'
 
 workflows:
   update-text:
