@@ -12,9 +12,9 @@ jobs:
       - run: git config --global user.name tokizuoh
       - run: git add sample.txt
       - run:
-          shell: /bin/sh 
+          shell: /bin/bash 
           command: |
-            set +e
+            # set +e
             git commit -m '[CircleCI] update sample.txt'
 
 workflows:
