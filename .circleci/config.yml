@@ -6,9 +6,8 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
-      - run:
-          name: "git log -1"
-          command: "git log -1"
+      - run: "git add sample.txt"
+      - run: "git commit -m '[CircleCI] update sample.txt'"
 
 workflows:
   say-hello-workflow:
