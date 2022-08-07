@@ -15,7 +15,7 @@ jobs:
           shell: /bin/bash 
           command: |
             # set +e
-            git commit -m '[CircleCI] update sample.txt'
+            git commit -m '[CircleCI] update sample.txt' || true
 
 workflows:
   update-text:
