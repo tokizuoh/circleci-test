@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   update-text:
     docker:
-      - image: cimg/base:stable
+      - image: ubuntu:xenial-20210804
     steps:
       - checkout 
       - run: git config --global user.email hogehoge
