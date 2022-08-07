@@ -7,7 +7,6 @@ jobs:
     steps:
       - checkout
       - run: "git add sample.txt"
-      - run: "ls"
       - run: "git commit -m '[CircleCI] update sample.txt'"
 
 workflows:
