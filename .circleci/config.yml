@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  xxx:
+  update-text:
     docker:
       - image: cimg/base:stable
     steps:
@@ -10,6 +10,6 @@ jobs:
       - run: "git commit -m '[CircleCI] update sample.txt'"
 
 workflows:
-  xxx:
+  update-text:
     jobs:
-      - xxx
+      - update-text
