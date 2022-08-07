@@ -6,11 +6,13 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout 
-      - run: set +e
       - run: git config --global user.email hogehoge
       - run: git config --global user.name tokizuoh
       - run: git add sample.txt
-      - run: git commit -m '[CircleCI] update sample.txt'
+      - run:
+          command: |
+            set +e
+            git commit -m '[CircleCI] update sample.txt'
 
 workflows:
   update-text:
